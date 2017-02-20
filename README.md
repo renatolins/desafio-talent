@@ -1,4 +1,4 @@
-# desafio-talent
+# Desafio Talent
 Desafio do processo seletivo iniciato pela Talent Group
 
 ##Como rodar
