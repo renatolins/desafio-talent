@@ -1,0 +1,51 @@
+<div class="jumbotron cadastro">
+
+
+    <h2>Cadastro de viagens</h2>
+    <form name="formCadastro" class="form-cadastro" ng-submit="enviaform(formCadastro.$valid)" class="row" novalidate>
+
+        <div class="form-cadastro_form-group col-md-6 col-sm-12 form-group" ng-class="{'has-error': formCadastro.origem.$invalid && enviado}">
+            <label for="form-cadastro_origem" class="form-logado_label-group">Origem</label>
+            <input type="text" class="form-cadastro_origem form-control" id="form-cadastro_origem" ng-model="viagem.origem" name="origem" autofocus required>
+            <span class="erro-campo" ng-show="formCadastro.origem.$invalid && enviado">Informe a origem</span>
+        </div>
+
+        <div class="form-cadastro_form-group col-md-6 col-sm-12 form-group" ng-class="{'has-error': formCadastro.destino.$invalid && enviado}">
+            <label for="form-cadastro_destino" class="form-logado_label-group">Destino</label>
+            <input type="text" class="form-cadastro_destino form-control" id="form-cadastro_destino" ng-model="viagem.destino" name="destino" required>
+            <span class="erro-campo" ng-show="formCadastro.destino.$invalid && enviado">Informe o destino</span>
+        </div>
+
+        <div class="form-cadastro_form-group col-md-6 col-sm-12 form-group" ng-class="{'has-error': formCadastro.datap.$invalid && enviado}">
+            <label for="form-cadastro_data-partida" class="form-logado_label-group">Data</label>
+            <input type="date" class="form-cadastro_data-partida form-control" id="form-cadastro_data-partida" name="datap" ng-model="viagem.datap" placeholder="dd-MM-yyyy" min="{{dateHelper.currentDate| date: 'dd-MM-yyyy'}}" max="2100-01-01" required>
+            <span class="erro-campo" ng-show="formCadastro.datap.$invalid && enviado">Escolha uma data válida</span>
+        </div>
+
+        <div class="form-cadastro_form-group col-md-6 col-sm-12 form-group" ng-class="{'has-error': formCadastro.horario.$invalid && enviado}">
+            <label for="form-cadastro_horario-partida" class="form-logado_label-group">Horário</label>
+            <input type="time" class="form-cadastro_horario-partida form-control" id="form-cadastro_horario-partida" name="horario" ng-model="viagem.horario" required>
+            <span class="erro-campo" ng-show="formCadastro.horario.$invalid && enviado">Informe um horário válido</span>
+        </div>
+
+        <div class="form-cadastro_form-group col-md-6 col-sm-12 form-group" ng-class="{'has-error': formCadastro.veiculo.$invalid && enviado}">
+            <label for="form-cadastro_tipo-veiculo" class="form-logado_label-group">Veículo</label>
+            <input type="text" class="form-cadastro_tipo-veiculo form-control" id="form-cadastro_tipo-veiculo" name="veiculo" ng-model="viagem.veiculo" required>
+            <span class="erro-campo" ng-show="formCadastro.veiculo.$invalid && enviado">Informe o veículo</span>
+        </div>
+
+        <div class="form-cadastro_form-group col-md-6 col-sm-12 form-group" ng-class="{'has-error': formCadastro.contatos.$invalid && enviado}">
+            <label for="form-cadastro_contatos" class="form-logado_label-group">Contatos</label>
+            <input type="text" class="form-cadastro_contato form-control" id="form-cadastro_contatos" name="contatos" ng-model="viagem.contatos" required>
+            <span class="erro-campo" ng-show="formCadastro.contatos.$invalid && enviado">Informe pelo menos um contato</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-enviar" ng-click="enviado=true">Enviar</button>
+
+        <div class="alert alert-success" ng-show="mostraMensagem">
+  {{mensagemCadastro}}
+</div>
+
+    </form>
+
+</div>

@@ -1,0 +1,185 @@
+@charset "UTF-8"; //libs
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss"; //reset que praticamente não sobreescreve estilos do bootstrap
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    display: block;
+    /*IE reset*/
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+}
+//estilo (theming) dos elementos bootstrap utilizados no site
+
+.navbar-inverse {
+    background-color: #222;
+}
+
+.navbar-inverse {
+    border: 0;
+    border-radius: 0;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    transition: 0.3s all ease;
+    color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #0063f4;
+}
+
+.btn-primary,
+.btn-primary:hover {
+    background-color: #0063f4;
+    padding: 8px 12px;
+    font-size: 16px;
+}
+
+.jumbotron {
+    background: #fff;
+    border: 1px #ddd solid;
+}
+
+.btn-danger {
+    height: 26px;
+    padding: 3px 7px;
+}
+
+.table-header {
+    font-weight: bold;
+    background-color: #eee;
+    color: #000;
+}
+//elementos personalizados
+.jumbotron.info {
+    padding-top: 20px;
+}
+
+.jumbotron.info h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+main.container {
+    margin-bottom: 20px;
+}
+
+.home-view {
+    min-height: 162px;
+}
+
+footer {
+    margin: 0 !important; //garantindo uma consistencia crossbrowser já que isso é muito importante no contexto do app
+}
+
+.logo-container {
+    padding: 40px 0;
+    min-height: 452px;
+}
+
+.record-name {
+    display: inline-block;
+}
+
+.record-name_text {
+    padding: 4px 8px;
+}
+
+.add-button {
+    position: relative;
+    top: -4px;
+}
+
+.jumbotron.container {
+    padding-top: 10px;
+    @extend .clearfix;
+
+    label {
+        width: 65px;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    input {
+        font-size: 18px;
+        padding: 7px 12px;
+        max-width: 100%;
+        min-width: 300px;
+    }
+}
+
+.form-cadastro_form-group {
+    margin: 20px 0;
+}
+//responsive
+@media(max-width: 768px) {
+    .navbar-inverse .navbar-nav > li {
+        padding-left: 15px !important;
+    }
+}
+@media(max-width: 590px) {
+    .jumbotron.cadastro {
+        input {
+            min-width: 0;
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+.btn-enviar {
+    margin: 20px;
+    width: 120px;
+}
+
+.erro-campo {
+    color: #a94442;
+    position: absolute;
+}
+
+.listagem {
+    margin-top: 40px;
+}

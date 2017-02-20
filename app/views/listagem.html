@@ -1,0 +1,35 @@
+<div class="jumbotron container">
+
+   <h2>Viagens Cadastradas</h2>
+
+    <table class="table table-striped table-bordered listagem">
+        <thead class="table-header">
+            <tr>
+                <th>Origem</th>
+                <th>Destino</th>
+                <th>Data</th>
+                <th>Horário</th>
+                <th>Veículo</th>
+                <th>Contatos</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr ng-repeat="viagem in viagens">
+                <td>{{viagem.origem}}</td>
+                <td>{{viagem.destino}}</td>
+                <td>{{viagem.datap | date: "dd/MM/y"}}</td>
+                <td>{{viagem.horario | date: "hh:mm"}}</td>
+                <td>{{viagem.veiculo}}</td>
+                <td>{{viagem.contatos}}</td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary" ng-click="limparRegistros(viagens)">Limpar Registros</button>
+
+</div>
