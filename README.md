@@ -3,14 +3,14 @@ Desafio do processo seletivo iniciato pela Talent Group
 
 ##Como rodar
 
- ###Instale o node
+1. Instale o node
 
- ###Instale o git
+2. Instale o git
 
- ###Instale o ruby + sass (rubyinstaller.org/downloads + $ gem install sass)
+3. Instale o ruby + sass (rubyinstaller.org/downloads + $ gem install sass)
 
- ###Instale o gulp globalmente com $ npm install gulp-cli -g  
+4. Instale o gulp globalmente com $ npm install gulp-cli -g  
 
- ###Entre na pasta do projeto e execute o comando $ npm install
+5. Entre na pasta do projeto e execute o comando $ npm install
 
- ###Rode o app com a task default: $ gulp
+6. Rode o app com a task default: $ gulp
