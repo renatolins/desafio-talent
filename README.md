@@ -9,6 +9,8 @@ Desafio do processo seletivo iniciato pela Talent Group
 
 3. Instale o gulp globalmente com ```npm install gulp-cli -g```
 
-4. Entre na pasta do projeto e instale as dependências com ```npm install```
+4. Entre na pasta do projeto e instale o gulp localmente com ```npm install gulp --save-dev```
 
-5. Rode o app com a task default: ```gulp```
+5. Instale as dependências com ```npm install```
+
+6. Rode o app com a task default: ```gulp```
